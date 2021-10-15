@@ -24,7 +24,7 @@
    <h2>Ingredients</h2>
    <!-- {{state.recipe.extendedIngredients}} -->
    <form @change="setUnits(units)">
-        <input type="radio" id="metric" name="unitType" value="metric" v-model="units">
+        <input type="radio" id="metric" name="unitType" value="metric" v-model="units" checked>
         <label for="metric">Metric</label><br>
         <input type="radio" id="us" name="unitType" value="us" v-model="units">
         <label for="us">US</label><br>
@@ -79,7 +79,7 @@ export default {
         query: "",
         recipe: {},
         instructions: {},
-        units: 'us',
+        units: 'metric',
         testData: {
     "vegetarian": true,
     "vegan": false,
